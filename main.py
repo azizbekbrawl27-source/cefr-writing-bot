@@ -18,7 +18,7 @@ Foydalanuvchi yuborgan rasmdagi insho matnini o'qing va quyidagi qat'iy struktur
    - Main News / Main Body
    - Emotion / Reaction
    - Closing & Sign-off
-3. GRAMMATIKA VA PREDLOG HATORI:
+3. GRAMMATIKA VA PREDLOG HATOLARI:
    - Sifat va predlog birikmalarini tekshiring.
    - Topilgan xatolarni ko'rsatib, to'g'ri variantini bering.
 4. YAKUNIY BAHO VA MASLAHAT.
@@ -63,7 +63,7 @@ def handle_photo(message):
                     ],
                 }
             ],
-            model="llama-3.2-90b-vision-preview",
+            model="qwen/qwen3.6-27b",
         )
         
         response_text = chat_completion.choices[0].message.content
@@ -74,3 +74,4 @@ def handle_photo(message):
 
 print("Bot muvaffaqiyatli ishga tushdi!")
 bot.infinity_polling(timeout=10, long_polling_timeout=5)
+
