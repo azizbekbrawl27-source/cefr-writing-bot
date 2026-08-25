@@ -63,7 +63,7 @@ def handle_photo(message):
                     ],
                 }
             ],
-            model="llama-3.2-11b-vision-preview",
+            model="llama-3.2-90b-vision-preview",
         )
         
         response_text = chat_completion.choices[0].message.content
@@ -74,4 +74,3 @@ def handle_photo(message):
 
 print("Bot muvaffaqiyatli ishga tushdi!")
 bot.infinity_polling(timeout=10, long_polling_timeout=5)
-
